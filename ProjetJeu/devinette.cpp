@@ -4,7 +4,7 @@
 
 
 
-main() {
+int main() {
 
     int number;
     int tentative = 0;
