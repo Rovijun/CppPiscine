@@ -1,19 +1,24 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-int bissextile(int annee){
-    if ((annee % 4 == 0 || annee % 400 == 0) && (annee % 100 !=0)) {
-	    cout << "L'année est bissextile";
-	} else {
-		cout << "L'année n'est pas bissextile";
+string bissextile(int annee){
+	if (annee % 400 ==0) {
+		return "L'année est bissextile";
 	}
-	return annee;
+    if ((annee % 4 == 0 && annee % 100 != 0)) {
+		return "L'année est bissextile";
+	} else {
+		return "L'année n'est pas bissextile";
+	}
+	return "L'année n'est pas bissextile";
+	
 }
 
 int main() {
     int annee;
 	cout << "Entrez l'année : ";
 	cin >> annee;
-	bissextile(annee);
+	cout << bissextile(annee);
     return 0;
 }
