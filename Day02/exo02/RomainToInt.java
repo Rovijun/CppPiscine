@@ -22,7 +22,11 @@ public class Main {
     }
  
     public static void main(String[] args) {
-        String roman_numeral_input = "MMIX";
+        if (args.length < 1) {
+			System.out.println("Usage : prog <chiffre romain>");
+			return; 
+		}
+		String roman_numeral_input = args[0];
         int number_output = transform_roman_numeral_to_number(roman_numeral_input);
         System.out.println("Chiffre romain " + roman_numeral_input + " converti en chiffre arabe : " + number_output);
     }
